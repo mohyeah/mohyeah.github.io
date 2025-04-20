@@ -1,7 +1,9 @@
+https://mohyeah.github.io/css/modify.css
+https://mohyeah.github.io/2025/04/20/test/
+https://mohyeah.github.io/2025/04/20/test2/
 https://mohyeah.github.io/tags/index.html
 https://mohyeah.github.io/categories/index.html
 https://mohyeah.github.io/test/index.html
-https://mohyeah.github.io/2025/04/19/post/
 https://mohyeah.github.io/about/index.html
-https://mohyeah.github.io/2025/04/20/hello-world/
 https://mohyeah.github.io/
+https://mohyeah.github.io/tags/python/
