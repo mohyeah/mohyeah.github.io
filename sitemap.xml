@@ -99,14 +99,14 @@
   </url>
   
   <url>
-    <loc>https://mohyeah.github.io/tags/django/</loc>
+    <loc>https://mohyeah.github.io/tags/test/</loc>
     <lastmod>2025-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://mohyeah.github.io/tags/test/</loc>
+    <loc>https://mohyeah.github.io/tags/django/</loc>
     <lastmod>2025-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
