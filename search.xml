@@ -4,6 +4,69 @@
   
     
     <entry>
+      <title>video_test</title>
+      <link href="/2025/04/21/video/"/>
+      <url>/2025/04/21/video/</url>
+      
+        <content type="html"><![CDATA[<h1 id="try"><a href="#try" class="headerlink" title="try"></a>try</h1><div align=center class="aspect-ratio">    <iframe src="https://player.bilibili.com/player.html?aid=113657048469239&bvid=BV12VBFYmEov&cid=27358660707&&page=1&as_wide=1&high_quality=1&danmaku=0"     scrolling="no"     border="0"     frameborder="no"     framespacing="0"     high_quality=1    danmaku=1     allowfullscreen="true">     </iframe></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随想 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> test </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test6</title>
+      <link href="/2025/04/21/test6/"/>
+      <url>/2025/04/21/test6/</url>
+      
+        <content type="html"><![CDATA[<p>just test</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test5</title>
+      <link href="/2025/04/21/test5/"/>
+      <url>/2025/04/21/test5/</url>
+      
+        <content type="html"><![CDATA[<p>随便写写</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随想 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>test4</title>
       <link href="/2025/04/21/test4/"/>
       <url>/2025/04/21/test4/</url>
@@ -13,7 +76,7 @@
       
       <categories>
           
-          <category> 未分类 </category>
+          <category> 学习 </category>
           
       </categories>
       
@@ -33,7 +96,7 @@
       <link href="/2025/04/21/test3/"/>
       <url>/2025/04/21/test3/</url>
       
-        <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> django</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> django.core.wsgi <span class="keyword">import</span> get_wsgi_application</span><br><span class="line"></span><br><span class="line">os.environ.setdefault(<span class="string">'DJANGO_SETTINGS_MODULE'</span>, <span class="string">'blog.settings'</span>)</span><br><span class="line">django.setup()</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> post.models <span class="keyword">import</span> Post, Content</span><br><span class="line"></span><br><span class="line"><span class="comment"># ps = Post.objects.all()</span></span><br><span class="line"><span class="comment"># for x in ps:</span></span><br><span class="line"><span class="comment">#     print(x)</span></span><br><span class="line"><span class="comment">#     print(x.postdate)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 增删改</span></span><br><span class="line"><span class="comment"># post对象若没指定id, save一定是新增</span></span><br><span class="line"><span class="comment"># 若post对象指定id, 一种数据库中没有对应的记录就是新增, 若有, 就是修改</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> django.db.transaction <span class="keyword">import</span> atomic</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># post = Post()</span></span><br><span class="line"><span class="comment"># try:</span></span><br><span class="line"><span class="comment">#     #post.id = 101 # insert into , 由于是新增且字段是自增, 所以可以不赋值</span></span><br><span class="line"><span class="comment">#     post.title = 't107'</span></span><br><span class="line"><span class="comment">#     post.postdate = datetime.datetime.now(</span></span><br><span class="line"><span class="comment">#         datetime.timezone(datetime.timedelta(hours=8))    # 存入数据库时都是UTC时间, 取出时转换</span></span><br><span class="line"><span class="comment">#     ) # aware</span></span><br><span class="line"><span class="comment">#     post.author_id = 2</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#     c = Content()</span></span><br><span class="line"><span class="comment">#     c.content = 'content107'</span></span><br><span class="line"><span class="comment">#     with atomic():  # 原子性操作, 保证2张表同时成功或失败</span></span><br><span class="line"><span class="comment">#         post.save() # 持久化, 成功提交, 失败回滚</span></span><br><span class="line"><span class="comment">#         #print(post.pk)  # 若成功持久化, 则pk不为空</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#         #c.post_id = post.id</span></span><br><span class="line"><span class="comment">#         c.post = post</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#         c.save()</span></span><br><span class="line"><span class="comment">#     print(post.pk)</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># except Exception as e:</span></span><br><span class="line"><span class="comment">#     print(e)</span></span><br><span class="line"><span class="comment">#     print('=' * 30)</span></span><br><span class="line"><span class="comment">#     print(post.pk)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改, 对存在的持久化了的数据进行修改: 先查后改; 先查再删除</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    post = Post.objects.<span class="built_in">filter</span>(title=<span class="string">'t105'</span>).first()    <span class="comment"># 从数据库中获取一个持久化的对象</span></span><br><span class="line">    <span class="keyword">if</span> post:</span><br><span class="line">        <span class="built_in">print</span>(post, post.pk, post.<span class="built_in">id</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment">#post.author_id = 1</span></span><br><span class="line">        <span class="comment">#post.save()</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">with</span> atomic():   <span class="comment"># 原子性操作, 保证2张表同时成功或失败</span></span><br><span class="line">            post.content.delete()   <span class="comment">#※ 一对一关系中:先删除关联对象</span></span><br><span class="line">            <span class="comment"># 1/0</span></span><br><span class="line">            post.delete()           <span class="comment">#※ 一对一关系中:再删除主对象</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">    <span class="built_in">print</span>(e)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'='</span> * <span class="number">30</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># try:</span></span><br><span class="line"><span class="comment">#     ret = Post.objects.filter(id__gt=100).update(author=1)  # 批量更新, 危险, 慎用</span></span><br><span class="line"><span class="comment">#     print(ret)</span></span><br><span class="line"><span class="comment"># except Exception as e:</span></span><br><span class="line"><span class="comment">#     print(e)</span></span><br><span class="line"><span class="comment">#     print('=' * 30)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># try:</span></span><br><span class="line"><span class="comment">#     ret = Post.objects.filter(id__gt=106).delete()</span></span><br><span class="line"><span class="comment">#     print(ret)  # Django拦截删除操作, 不推荐使用该方法</span></span><br><span class="line"><span class="comment"># except Exception as e:</span></span><br><span class="line"><span class="comment">#     print(e)</span></span><br><span class="line"><span class="comment">#     print('=' * 30)</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<p>try</p><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> django</span><br><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> django.core.wsgi <span class="keyword">import</span> get_wsgi_application</span><br><span class="line"></span><br><span class="line">os.environ.setdefault(<span class="string">'DJANGO_SETTINGS_MODULE'</span>, <span class="string">'blog.settings'</span>)</span><br><span class="line">django.setup()</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> post.models <span class="keyword">import</span> Post, Content</span><br><span class="line"></span><br><span class="line"><span class="comment"># ps = Post.objects.all()</span></span><br><span class="line"><span class="comment"># for x in ps:</span></span><br><span class="line"><span class="comment">#     print(x)</span></span><br><span class="line"><span class="comment">#     print(x.postdate)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 增删改</span></span><br><span class="line"><span class="comment"># post对象若没指定id, save一定是新增</span></span><br><span class="line"><span class="comment"># 若post对象指定id, 一种数据库中没有对应的记录就是新增, 若有, 就是修改</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> django.db.transaction <span class="keyword">import</span> atomic</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># post = Post()</span></span><br><span class="line"><span class="comment"># try:</span></span><br><span class="line"><span class="comment">#     #post.id = 101 # insert into , 由于是新增且字段是自增, 所以可以不赋值</span></span><br><span class="line"><span class="comment">#     post.title = 't107'</span></span><br><span class="line"><span class="comment">#     post.postdate = datetime.datetime.now(</span></span><br><span class="line"><span class="comment">#         datetime.timezone(datetime.timedelta(hours=8))    # 存入数据库时都是UTC时间, 取出时转换</span></span><br><span class="line"><span class="comment">#     ) # aware</span></span><br><span class="line"><span class="comment">#     post.author_id = 2</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#     c = Content()</span></span><br><span class="line"><span class="comment">#     c.content = 'content107'</span></span><br><span class="line"><span class="comment">#     with atomic():  # 原子性操作, 保证2张表同时成功或失败</span></span><br><span class="line"><span class="comment">#         post.save() # 持久化, 成功提交, 失败回滚</span></span><br><span class="line"><span class="comment">#         #print(post.pk)  # 若成功持久化, 则pk不为空</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#         #c.post_id = post.id</span></span><br><span class="line"><span class="comment">#         c.post = post</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#         c.save()</span></span><br><span class="line"><span class="comment">#     print(post.pk)</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># except Exception as e:</span></span><br><span class="line"><span class="comment">#     print(e)</span></span><br><span class="line"><span class="comment">#     print('=' * 30)</span></span><br><span class="line"><span class="comment">#     print(post.pk)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改, 对存在的持久化了的数据进行修改: 先查后改; 先查再删除</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    post = Post.objects.<span class="built_in">filter</span>(title=<span class="string">'t105'</span>).first()    <span class="comment"># 从数据库中获取一个持久化的对象</span></span><br><span class="line">    <span class="keyword">if</span> post:</span><br><span class="line">        <span class="built_in">print</span>(post, post.pk, post.<span class="built_in">id</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment">#post.author_id = 1</span></span><br><span class="line">        <span class="comment">#post.save()</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">with</span> atomic():   <span class="comment"># 原子性操作, 保证2张表同时成功或失败</span></span><br><span class="line">            post.content.delete()   <span class="comment">#※ 一对一关系中:先删除关联对象</span></span><br><span class="line">            <span class="comment"># 1/0</span></span><br><span class="line">            post.delete()           <span class="comment">#※ 一对一关系中:再删除主对象</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">    <span class="built_in">print</span>(e)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">'='</span> * <span class="number">30</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># try:</span></span><br><span class="line"><span class="comment">#     ret = Post.objects.filter(id__gt=100).update(author=1)  # 批量更新, 危险, 慎用</span></span><br><span class="line"><span class="comment">#     print(ret)</span></span><br><span class="line"><span class="comment"># except Exception as e:</span></span><br><span class="line"><span class="comment">#     print(e)</span></span><br><span class="line"><span class="comment">#     print('=' * 30)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># try:</span></span><br><span class="line"><span class="comment">#     ret = Post.objects.filter(id__gt=106).delete()</span></span><br><span class="line"><span class="comment">#     print(ret)  # Django拦截删除操作, 不推荐使用该方法</span></span><br><span class="line"><span class="comment"># except Exception as e:</span></span><br><span class="line"><span class="comment">#     print(e)</span></span><br><span class="line"><span class="comment">#     print('=' * 30)</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
